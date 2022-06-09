@@ -11,15 +11,28 @@ INSERT INTO Estação VALUES ('Aveiro',5,10);
 
 -- SELECT * FROM Estação;
 
-INSERT TipoFunc VALUES (10322, 'Secretário' );
-INSERT TipoFunc VALUES (10001, 'Condutor' );
-INSERT TipoFunc VALUES (10002, 'Revisor' );
+INSERT INTO TipoFunc VALUES (10322, 'Secretário' );
+INSERT INTO TipoFunc VALUES (10001, 'Condutor' );
+INSERT INTO TipoFunc VALUES (10002, 'Revisor' );
 
 -- SELECT * FROM TipoFunc;
 
-INSERT Funcionário VALUES (10001,'Bruno Peterson',1200,'1980-2-2',918833999,'Aveiro rua tal e coiso',10322);
-INSERT Funcionário VALUES (10002,'Marcus Teles',1500,'1980-2-2',918833779,'Aveiro rua coiso e tal',10001);
-INSERT Funcionário VALUES (10003,'Rui Luis',1500,'1980-2-2',918835999,'Porto alameda do bairro',10002);
+INSERT INTO Funcionário VALUES (10001,'Bruno Peterson',1200,'1980-2-2',918833999,'Aveiro rua tal e coiso',10322);
+INSERT INTO Funcionário VALUES (10002,'Marcus Teles',1500,'1980-2-2',918833779,'Aveiro rua coiso e tal',10001);
+INSERT INTO Funcionário VALUES (10003,'Rui Luis',1500,'1980-2-2',918835999,'Porto alameda do bairro',10002);
 
 -- SELECT * FROM Funcionário;
 -- SELECT * FROM Funcionário, TipoFunc WHERE TipoFunc.ID = FuncID
+
+INSERT INTO Balcão VALUES (1,'Aveiro',10001);
+
+
+-- SELECT * FROM Balcão;
+-- SELECT * FROM Balcão, Funcionário Where Balcão.FuncId = Funcionário.ID;
+
+INSERT INTO Bilhete VALUES ('Aveiro','São Bento',1);
+INSERT INTO Bilhete VALUES ('Aveiro','Ovar',1);
+
+-- SELECT * FROM Bilhete
+-- SELECT * FROM Bilhete WHERE EstaçãoChegada = 'Ovar' 
+
