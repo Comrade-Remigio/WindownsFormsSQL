@@ -131,7 +131,7 @@ CREATE TABLE HorárioTrajeto (
 			HoraSaida DATETIME NOT NULL,
 			HoraChegada DATETIME NOT NULL,
 			PRIMARY KEY (TrajetoID,HoraSaida,HoraChegada),
-
+			FOREIGN KEY (TrajetoID) REFERENCES Trajeto(ID) on DELETE CASCADE
 );
 
 CREATE TABLE ComboioFazTrajeto (

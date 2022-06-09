@@ -1,5 +1,7 @@
 
 
+DROP TABLE ComboioFazTrajeto;
+DROP TABLE HorárioTrajeto;
 drop table FazParagem;
 drop table Trajeto; 
 drop table Carruagem;
