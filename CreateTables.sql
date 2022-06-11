@@ -18,7 +18,9 @@ CREATE TABLE TipoFunc (
 
 CREATE TABLE Funcionário (
 			ID int UNIQUE NOT NULL,
-			Nome VARCHAR(250) not null,
+			FName VARCHAR(50) not null,
+			MName VARCHAR(50) not null,
+			LName VARCHAR(50) not null,
 			Salário int not null,
 			Data_Nascimento Date not null,
 			N_Telemóvel VARCHAR(9) NOT NULL,
@@ -57,7 +59,9 @@ CREATE TABLE Bilhete (
 CREATE TABLE Passageiro (
 			
 			Num_CC VARCHAR(8) NOT NULL,
-			Nome VARCHAR(250) NOT NULL,
+			FName VARCHAR(50) not null,
+			MName VARCHAR(50) not null,
+			LName VARCHAR(50) not null,
 			Num_Tel VARCHAR(9),
 			Data_Nascimento Date not null,
 

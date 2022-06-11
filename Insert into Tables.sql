@@ -17,9 +17,9 @@ INSERT INTO TipoFunc VALUES (10002, 'Revisor' );
 
 -- SELECT * FROM TipoFunc;
 
-INSERT INTO Funcionário VALUES (10001,'Bruno Peterson',1200,'1980-2-2',918833999,'Aveiro rua tal e coiso',10322);
-INSERT INTO Funcionário VALUES (10002,'Marcus Teles',1500,'1980-2-2',918833779,'Aveiro rua coiso e tal',10001);
-INSERT INTO Funcionário VALUES (10003,'Rui Luis',1500,'1980-2-2',918835999,'Porto alameda do bairro',10002);
+INSERT INTO Funcionário VALUES (10001,'Bruno','R' ,'Peterson',1200,'1980-2-2',918833999,'Aveiro rua tal e coiso',10322);
+INSERT INTO Funcionário VALUES (10002,'Marcus','L' ,'Teles',1500,'1980-2-2',918833779,'Aveiro rua coiso e tal',10001);
+INSERT INTO Funcionário VALUES (10003,'Rui','V','Luis',1500,'1980-2-2',918835999,'Porto alameda do bairro',10002);
 
 -- SELECT * FROM Funcionário;
 -- SELECT * FROM Funcionário, TipoFunc WHERE TipoFunc.ID = FuncID
