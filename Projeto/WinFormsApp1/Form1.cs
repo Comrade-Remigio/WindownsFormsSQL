@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,7 +39,7 @@ namespace WinFormsApp1
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-             String connectionStr = "Data Source=localhost;Initial Catalog=p8g10RedeComboios;Integrated Security=True; Encrypt=False;";
+            String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
              SqlConnection con = new SqlConnection(connectionStr);
             String SQLcommnad = "Insert INTO Estação VALUES ('" + textBox1.Text + "',"+ TextBoxBaby.Text+","+ textBox3.Text + ");";
              con.Open();
