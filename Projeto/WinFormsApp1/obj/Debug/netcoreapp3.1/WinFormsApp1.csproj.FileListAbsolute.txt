@@ -62,3 +62,7 @@ C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\bin\D
 C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.csproj.CopyComplete
 C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\bin\Debug\netcoreapp3.1\WinFormsApp1.dll.config
+C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.Properties.Resources.resources
+C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.FrmEstações.resources
+C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.FrmComboios.resources
+C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.FrmBilhetes.resources

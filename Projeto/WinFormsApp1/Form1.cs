@@ -15,49 +15,84 @@ namespace WinFormsApp1
 {
     public partial class Form1 : Form
     {
+
+        private Form AtivoFrm;
+
         public Form1()
         {
             InitializeComponent();
         }
 
 
+        private void FormShow(Form frm)
+        {
+            ActiveFormClose();
+            AtivoFrm = frm;
+            frm.TopLevel = false;
+            panelForms.Controls.Add(frm);
+            frm.BringToFront();
+            frm.Show();
+        }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void ActiveFormClose()
+        {
+            if (AtivoFrm != null)
+            {
+                AtivoFrm.Close();
+            }
+        }
+
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
+ 
 
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
-             SqlConnection con = new SqlConnection(connectionStr);
-            String SQLcommnad = "Insert INTO Estação VALUES ('" + textBox1.Text + "',"+ TextBoxBaby.Text+","+ textBox3.Text + ");";
-             con.Open();
-             SqlCommand SC = new SqlCommand(SQLcommnad, con);
-             SC.ExecuteNonQuery();
-             Console.WriteLine("Here we execute");
-             MessageBox.Show("Connection Open  !");
-            
-             con.Close();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void PictureEstação_Click(object sender, EventArgs e)
         {
 
         }
 
 
-        private void textBox2_TextChanged_2(object sender, EventArgs e)
+
+        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void ButtonEstações_Click(object sender, EventArgs e)
+        {
+            FormShow(new FrmEstações());
+        }
+
+        private void ButtonComboios_Click(object sender, EventArgs e)
+        {
+            FormShow(new FrmComboios());
+        }
+
+        private void ButtonBilhetes_Click(object sender, EventArgs e)
+        {
+            FormShow(new FrmBilhetes());
+        }
+
+        private void ButtonFuncionários_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonHorários_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonTrajetos_Click(object sender, EventArgs e)
         {
 
         }

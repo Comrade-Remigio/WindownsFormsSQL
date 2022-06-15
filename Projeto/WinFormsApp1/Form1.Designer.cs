@@ -29,106 +29,213 @@ namespace WinFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.TextBoxBaby = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.ButtonTrajetos = new System.Windows.Forms.Button();
+            this.ButtonHorários = new System.Windows.Forms.Button();
+            this.ButtonFuncionários = new System.Windows.Forms.Button();
+            this.ButtonBilhetes = new System.Windows.Forms.Button();
+            this.ButtonComboios = new System.Windows.Forms.Button();
+            this.ButtonEstações = new System.Windows.Forms.Button();
+            this.PanelEstações = new System.Windows.Forms.Panel();
+            this.PictureEstação = new System.Windows.Forms.PictureBox();
+            this.panelForms = new System.Windows.Forms.Panel();
+            this.PanelPrincipal.SuspendLayout();
+            this.PanelEstações.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureEstação)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // PanelPrincipal
             // 
-            this.textBox1.Location = new System.Drawing.Point(91, 97);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(312, 23);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.PanelPrincipal.BackColor = System.Drawing.Color.ForestGreen;
+            this.PanelPrincipal.Controls.Add(this.ButtonTrajetos);
+            this.PanelPrincipal.Controls.Add(this.ButtonHorários);
+            this.PanelPrincipal.Controls.Add(this.ButtonFuncionários);
+            this.PanelPrincipal.Controls.Add(this.ButtonBilhetes);
+            this.PanelPrincipal.Controls.Add(this.ButtonComboios);
+            this.PanelPrincipal.Controls.Add(this.ButtonEstações);
+            this.PanelPrincipal.Controls.Add(this.PanelEstações);
+            this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.PanelPrincipal.Name = "PanelPrincipal";
+            this.PanelPrincipal.Size = new System.Drawing.Size(211, 655);
+            this.PanelPrincipal.TabIndex = 0;
             // 
-            // TextBoxBaby
+            // ButtonTrajetos
             // 
-            this.TextBoxBaby.Location = new System.Drawing.Point(91, 159);
-            this.TextBoxBaby.Name = "TextBoxBaby";
-            this.TextBoxBaby.Size = new System.Drawing.Size(98, 23);
-            this.TextBoxBaby.TabIndex = 1;
-            this.TextBoxBaby.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.ButtonTrajetos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonTrajetos.FlatAppearance.BorderSize = 0;
+            this.ButtonTrajetos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.ButtonTrajetos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonTrajetos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonTrajetos.ForeColor = System.Drawing.Color.White;
+            this.ButtonTrajetos.Image = ((System.Drawing.Image)(resources.GetObject("ButtonTrajetos.Image")));
+            this.ButtonTrajetos.Location = new System.Drawing.Point(0, 565);
+            this.ButtonTrajetos.Name = "ButtonTrajetos";
+            this.ButtonTrajetos.Size = new System.Drawing.Size(211, 95);
+            this.ButtonTrajetos.TabIndex = 6;
+            this.ButtonTrajetos.Text = "Trajetos";
+            this.ButtonTrajetos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonTrajetos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonTrajetos.UseVisualStyleBackColor = true;
+            this.ButtonTrajetos.Click += new System.EventHandler(this.ButtonTrajetos_Click);
             // 
-            // label1
+            // ButtonHorários
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 15);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Nome";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.ButtonHorários.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonHorários.FlatAppearance.BorderSize = 0;
+            this.ButtonHorários.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.ButtonHorários.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonHorários.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonHorários.ForeColor = System.Drawing.Color.White;
+            this.ButtonHorários.Image = ((System.Drawing.Image)(resources.GetObject("ButtonHorários.Image")));
+            this.ButtonHorários.Location = new System.Drawing.Point(0, 470);
+            this.ButtonHorários.Name = "ButtonHorários";
+            this.ButtonHorários.Size = new System.Drawing.Size(211, 95);
+            this.ButtonHorários.TabIndex = 5;
+            this.ButtonHorários.Text = "Horários";
+            this.ButtonHorários.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonHorários.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonHorários.UseVisualStyleBackColor = true;
+            this.ButtonHorários.Click += new System.EventHandler(this.ButtonHorários_Click);
             // 
-            // label2
+            // ButtonFuncionários
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(91, 141);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Nº de Linhas";
+            this.ButtonFuncionários.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonFuncionários.FlatAppearance.BorderSize = 0;
+            this.ButtonFuncionários.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.ButtonFuncionários.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonFuncionários.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonFuncionários.ForeColor = System.Drawing.Color.White;
+            this.ButtonFuncionários.Image = ((System.Drawing.Image)(resources.GetObject("ButtonFuncionários.Image")));
+            this.ButtonFuncionários.Location = new System.Drawing.Point(0, 375);
+            this.ButtonFuncionários.Name = "ButtonFuncionários";
+            this.ButtonFuncionários.Size = new System.Drawing.Size(211, 95);
+            this.ButtonFuncionários.TabIndex = 4;
+            this.ButtonFuncionários.Text = "Funcionários";
+            this.ButtonFuncionários.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonFuncionários.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonFuncionários.UseVisualStyleBackColor = true;
+            this.ButtonFuncionários.Click += new System.EventHandler(this.ButtonFuncionários_Click);
             // 
-            // button1
+            // ButtonBilhetes
             // 
-            this.button1.Location = new System.Drawing.Point(328, 273);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.ButtonBilhetes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonBilhetes.FlatAppearance.BorderSize = 0;
+            this.ButtonBilhetes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.ButtonBilhetes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonBilhetes.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonBilhetes.ForeColor = System.Drawing.Color.White;
+            this.ButtonBilhetes.Image = ((System.Drawing.Image)(resources.GetObject("ButtonBilhetes.Image")));
+            this.ButtonBilhetes.Location = new System.Drawing.Point(0, 280);
+            this.ButtonBilhetes.Name = "ButtonBilhetes";
+            this.ButtonBilhetes.Size = new System.Drawing.Size(211, 95);
+            this.ButtonBilhetes.TabIndex = 3;
+            this.ButtonBilhetes.Text = "Bilhetes";
+            this.ButtonBilhetes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonBilhetes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonBilhetes.UseVisualStyleBackColor = true;
+            this.ButtonBilhetes.Click += new System.EventHandler(this.ButtonBilhetes_Click);
             // 
-            // label3
+            // ButtonComboios
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(214, 141);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Nº de Plataformas";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.ButtonComboios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonComboios.FlatAppearance.BorderSize = 0;
+            this.ButtonComboios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.ButtonComboios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonComboios.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonComboios.ForeColor = System.Drawing.Color.White;
+            this.ButtonComboios.Image = ((System.Drawing.Image)(resources.GetObject("ButtonComboios.Image")));
+            this.ButtonComboios.Location = new System.Drawing.Point(0, 185);
+            this.ButtonComboios.Name = "ButtonComboios";
+            this.ButtonComboios.Size = new System.Drawing.Size(211, 95);
+            this.ButtonComboios.TabIndex = 2;
+            this.ButtonComboios.Text = "Comboios";
+            this.ButtonComboios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonComboios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonComboios.UseVisualStyleBackColor = true;
+            this.ButtonComboios.Click += new System.EventHandler(this.ButtonComboios_Click);
             // 
-            // textBox3
+            // ButtonEstações
             // 
-            this.textBox3.Location = new System.Drawing.Point(214, 159);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox2_TextChanged_2);
+            this.ButtonEstações.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ButtonEstações.FlatAppearance.BorderSize = 0;
+            this.ButtonEstações.FlatAppearance.MouseOverBackColor = System.Drawing.Color.PaleGreen;
+            this.ButtonEstações.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonEstações.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonEstações.ForeColor = System.Drawing.Color.White;
+            this.ButtonEstações.Image = ((System.Drawing.Image)(resources.GetObject("ButtonEstações.Image")));
+            this.ButtonEstações.Location = new System.Drawing.Point(0, 90);
+            this.ButtonEstações.Name = "ButtonEstações";
+            this.ButtonEstações.Size = new System.Drawing.Size(211, 95);
+            this.ButtonEstações.TabIndex = 1;
+            this.ButtonEstações.Text = "Estações";
+            this.ButtonEstações.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonEstações.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ButtonEstações.UseVisualStyleBackColor = true;
+            this.ButtonEstações.Click += new System.EventHandler(this.ButtonEstações_Click);
+            // 
+            // PanelEstações
+            // 
+            this.PanelEstações.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.PanelEstações.Controls.Add(this.PictureEstação);
+            this.PanelEstações.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelEstações.Location = new System.Drawing.Point(0, 0);
+            this.PanelEstações.Name = "PanelEstações";
+            this.PanelEstações.Size = new System.Drawing.Size(211, 90);
+            this.PanelEstações.TabIndex = 1;
+            this.PanelEstações.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // PictureEstação
+            // 
+            this.PictureEstação.BackColor = System.Drawing.Color.Transparent;
+            this.PictureEstação.Image = ((System.Drawing.Image)(resources.GetObject("PictureEstação.Image")));
+            this.PictureEstação.Location = new System.Drawing.Point(12, 12);
+            this.PictureEstação.Name = "PictureEstação";
+            this.PictureEstação.Size = new System.Drawing.Size(190, 71);
+            this.PictureEstação.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureEstação.TabIndex = 0;
+            this.PictureEstação.TabStop = false;
+            this.PictureEstação.Click += new System.EventHandler(this.PictureEstação_Click);
+            // 
+            // panelForms
+            // 
+            this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelForms.Location = new System.Drawing.Point(211, 0);
+            this.panelForms.Name = "panelForms";
+            this.panelForms.Size = new System.Drawing.Size(698, 655);
+            this.panelForms.TabIndex = 1;
+            this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(492, 328);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.TextBoxBaby);
-            this.Controls.Add(this.textBox1);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(909, 655);
+            this.Controls.Add(this.panelForms);
+            this.Controls.Add(this.PanelPrincipal);
             this.Name = "Form1";
-            this.Text = "Add Estação";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.PanelPrincipal.ResumeLayout(false);
+            this.PanelEstações.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureEstação)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox TextBoxBaby;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Panel PanelPrincipal;
+        private System.Windows.Forms.Panel PanelEstações;
+        private System.Windows.Forms.PictureBox PictureEstação;
+        private System.Windows.Forms.Button ButtonEstações;
+        private System.Windows.Forms.Button ButtonTrajetos;
+        private System.Windows.Forms.Button ButtonHorários;
+        private System.Windows.Forms.Button ButtonFuncionários;
+        private System.Windows.Forms.Button ButtonBilhetes;
+        private System.Windows.Forms.Button ButtonComboios;
+        private System.Windows.Forms.Panel panelForms;
     }
 }
 
