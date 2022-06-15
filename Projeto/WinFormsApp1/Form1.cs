@@ -42,6 +42,19 @@ namespace WinFormsApp1
             }
         }
 
+        private void ActiveButton(Button Activo)
+        {
+            foreach (Control ctrl in PanelPrincipal.Controls)
+            {
+                if (ctrl != PanelEstações)
+                {
+                    ctrl.BackColor = Color.ForestGreen;
+                }
+            }
+            Activo.BackColor = Color.PaleGreen;
+
+        }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -55,11 +68,6 @@ namespace WinFormsApp1
 
  
 
-        private void PictureEstação_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         private void panel1_Paint_1(object sender, PaintEventArgs e)
@@ -69,32 +77,40 @@ namespace WinFormsApp1
 
         private void ButtonEstações_Click(object sender, EventArgs e)
         {
+            ActiveButton(ButtonEstações);
             FormShow(new FrmEstações());
         }
 
         private void ButtonComboios_Click(object sender, EventArgs e)
         {
+            ActiveButton(ButtonComboios);
             FormShow(new FrmComboios());
         }
 
         private void ButtonBilhetes_Click(object sender, EventArgs e)
         {
+            ActiveButton(ButtonBilhetes);
             FormShow(new FrmBilhetes());
         }
 
         private void ButtonFuncionários_Click(object sender, EventArgs e)
         {
-
+            ActiveButton(ButtonFuncionários);
+            FormShow(new FrmFuncionários());
         }
 
         private void ButtonHorários_Click(object sender, EventArgs e)
         {
-
+            ActiveButton(ButtonHorários);
+            FormShow(new FrmHorários());
         }
 
         private void ButtonTrajetos_Click(object sender, EventArgs e)
         {
-
+            ActiveButton(ButtonTrajetos);
+            FormShow(new FrmTrajetos());
         }
+
+
     }
 }

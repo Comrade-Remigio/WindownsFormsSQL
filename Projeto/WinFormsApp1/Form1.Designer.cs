@@ -196,7 +196,6 @@ namespace WinFormsApp1
             this.PictureEstação.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureEstação.TabIndex = 0;
             this.PictureEstação.TabStop = false;
-            this.PictureEstação.Click += new System.EventHandler(this.PictureEstação_Click);
             // 
             // panelForms
             // 
