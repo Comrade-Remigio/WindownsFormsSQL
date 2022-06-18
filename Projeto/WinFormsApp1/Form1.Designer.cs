@@ -40,9 +40,12 @@ namespace WinFormsApp1
             this.PanelEstações = new System.Windows.Forms.Panel();
             this.PictureEstação = new System.Windows.Forms.PictureBox();
             this.panelForms = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelPrincipal.SuspendLayout();
             this.PanelEstações.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureEstação)).BeginInit();
+            this.panelForms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelPrincipal
@@ -199,12 +202,25 @@ namespace WinFormsApp1
             // 
             // panelForms
             // 
+            this.panelForms.Controls.Add(this.pictureBox1);
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForms.Location = new System.Drawing.Point(211, 0);
             this.panelForms.Name = "panelForms";
             this.panelForms.Size = new System.Drawing.Size(698, 655);
             this.panelForms.TabIndex = 1;
             this.panelForms.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(291, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(404, 619);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -215,10 +231,13 @@ namespace WinFormsApp1
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.PanelPrincipal);
             this.Name = "Form1";
+            this.Text = "Rede Comboios";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelPrincipal.ResumeLayout(false);
             this.PanelEstações.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureEstação)).EndInit();
+            this.panelForms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,6 +254,7 @@ namespace WinFormsApp1
         private System.Windows.Forms.Button ButtonBilhetes;
         private System.Windows.Forms.Button ButtonComboios;
         private System.Windows.Forms.Panel panelForms;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

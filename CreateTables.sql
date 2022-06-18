@@ -98,7 +98,7 @@ CREATE TABLE Comboio (
 
 CREATE TABLE Carruagem (
 			Comboio_ID int Not null,
-			N_Carruagem int not null,
+			N_Carruagem int IDENTITY(1000,1) not null,
 			N_lugares int not null,
 			PRIMARY KEY (Comboio_ID, N_Carruagem),
 			FOREIGN KEY (Comboio_ID) REFERENCES Comboio(ID)
