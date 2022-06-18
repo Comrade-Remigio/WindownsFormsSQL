@@ -33,7 +33,36 @@ namespace WinFormsApp1
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ButtonAdicionarFuncionário = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ButtonRemoverFuncionário = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.ButtonAdicionarTipoFuncionário = new System.Windows.Forms.Button();
+            this.buttonRefreshTipos = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -50,6 +79,7 @@ namespace WinFormsApp1
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tabControl1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -58,6 +88,24 @@ namespace WinFormsApp1
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.ButtonRemoverFuncionário);
+            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.ButtonAdicionarFuncionário);
+            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.dateTimePicker1);
+            this.tabPage1.Controls.Add(this.textBox12);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.textBox11);
+            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.textBox10);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
@@ -70,6 +118,15 @@ namespace WinFormsApp1
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.buttonRefreshTipos);
+            this.tabPage2.Controls.Add(this.ButtonAdicionarTipoFuncionário);
+            this.tabPage2.Controls.Add(this.textBox5);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.panel1);
+            this.tabPage2.Controls.Add(this.label6);
             this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
@@ -79,6 +136,249 @@ namespace WinFormsApp1
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tipo Funcionário";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // ButtonAdicionarFuncionário
+            // 
+            this.ButtonAdicionarFuncionário.Location = new System.Drawing.Point(457, 396);
+            this.ButtonAdicionarFuncionário.Name = "ButtonAdicionarFuncionário";
+            this.ButtonAdicionarFuncionário.Size = new System.Drawing.Size(127, 29);
+            this.ButtonAdicionarFuncionário.TabIndex = 29;
+            this.ButtonAdicionarFuncionário.Text = "Adicionar";
+            this.ButtonAdicionarFuncionário.UseVisualStyleBackColor = true;
+            this.ButtonAdicionarFuncionário.Click += new System.EventHandler(this.ButtonAdicionarCliente_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(65, 299);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(166, 22);
+            this.label17.TabIndex = 28;
+            this.label17.Text = "Data Nascimento";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(65, 324);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(358, 29);
+            this.dateTimePicker1.TabIndex = 27;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(65, 193);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(463, 29);
+            this.textBox12.TabIndex = 26;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(65, 168);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 22);
+            this.label16.TabIndex = 25;
+            this.label16.Text = "Nome";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(341, 123);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(187, 29);
+            this.textBox11.TabIndex = 24;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(341, 98);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(150, 22);
+            this.label14.TabIndex = 23;
+            this.label14.Text = "Num Telemóvel";
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(65, 123);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(254, 29);
+            this.textBox10.TabIndex = 22;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(65, 98);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(30, 22);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "ID";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label15.ForeColor = System.Drawing.Color.Maroon;
+            this.label15.Location = new System.Drawing.Point(65, 50);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(140, 32);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "Adicionar";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(65, 262);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(463, 29);
+            this.textBox1.TabIndex = 31;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(65, 237);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 22);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Morada";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(65, 396);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(187, 29);
+            this.textBox2.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(65, 371);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 22);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Salário";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Maroon;
+            this.label4.Location = new System.Drawing.Point(65, 460);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 32);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Remover";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(65, 553);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(300, 29);
+            this.textBox3.TabIndex = 36;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(65, 528);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 22);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "ID";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // ButtonRemoverFuncionário
+            // 
+            this.ButtonRemoverFuncionário.Location = new System.Drawing.Point(457, 553);
+            this.ButtonRemoverFuncionário.Name = "ButtonRemoverFuncionário";
+            this.ButtonRemoverFuncionário.Size = new System.Drawing.Size(127, 29);
+            this.ButtonRemoverFuncionário.TabIndex = 37;
+            this.ButtonRemoverFuncionário.Text = "Remover";
+            this.ButtonRemoverFuncionário.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Maroon;
+            this.label6.Location = new System.Drawing.Point(73, 263);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(247, 32);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Tipos Funcionário";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.PaleGreen;
+            this.panel1.Location = new System.Drawing.Point(63, 308);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(536, 264);
+            this.panel1.TabIndex = 36;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.Location = new System.Drawing.Point(73, 119);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(209, 29);
+            this.textBox4.TabIndex = 39;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(73, 94);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(30, 22);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "ID";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.Maroon;
+            this.label8.Location = new System.Drawing.Point(73, 41);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(140, 32);
+            this.label8.TabIndex = 37;
+            this.label8.Text = "Adicionar";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.Location = new System.Drawing.Point(315, 119);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(209, 29);
+            this.textBox5.TabIndex = 41;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(315, 94);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 22);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Cargo";
+            // 
+            // ButtonAdicionarTipoFuncionário
+            // 
+            this.ButtonAdicionarTipoFuncionário.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonAdicionarTipoFuncionário.Location = new System.Drawing.Point(472, 170);
+            this.ButtonAdicionarTipoFuncionário.Name = "ButtonAdicionarTipoFuncionário";
+            this.ButtonAdicionarTipoFuncionário.Size = new System.Drawing.Size(127, 29);
+            this.ButtonAdicionarTipoFuncionário.TabIndex = 42;
+            this.ButtonAdicionarTipoFuncionário.Text = "Adicionar";
+            this.ButtonAdicionarTipoFuncionário.UseVisualStyleBackColor = true;
+            // 
+            // buttonRefreshTipos
+            // 
+            this.buttonRefreshTipos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonRefreshTipos.Location = new System.Drawing.Point(472, 266);
+            this.buttonRefreshTipos.Name = "buttonRefreshTipos";
+            this.buttonRefreshTipos.Size = new System.Drawing.Size(127, 29);
+            this.buttonRefreshTipos.TabIndex = 43;
+            this.buttonRefreshTipos.Text = "Refresh";
+            this.buttonRefreshTipos.UseVisualStyleBackColor = true;
             // 
             // FrmFuncionários
             // 
@@ -91,6 +391,10 @@ namespace WinFormsApp1
             this.Name = "FrmFuncionários";
             this.Text = "FrmFuncionários";
             this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,5 +406,32 @@ namespace WinFormsApp1
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button ButtonAdicionarFuncionário;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button ButtonRemoverFuncionário;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button ButtonAdicionarTipoFuncionário;
+        private System.Windows.Forms.Button buttonRefreshTipos;
     }
 }
