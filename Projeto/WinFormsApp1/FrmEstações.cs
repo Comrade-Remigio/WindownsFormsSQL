@@ -60,12 +60,22 @@ namespace WinFormsApp1
         private void buttonAdicionarEstação_Click(object sender, EventArgs e)
         {
             String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
-            String Query = "INSERT INTO ESTAÇÃO VALUES ( '" + textboxNomeAdd.Text +"',"+textBoxNlinhas.Text+","+textBoxNPlataformas.Text+")";
-            SqlConnection con = new SqlConnection(connectionStr);
-            con.Open();
-            SqlCommand sc = new SqlCommand(Query, con);
-            sc.ExecuteNonQuery();
-            con.Close();
+            try {
+                SqlConnection con = new SqlConnection(connectionStr);
+                con.Open();
+                SqlCommand sc = new SqlCommand("CreateEstacao", con);
+                sc.CommandType = CommandType.StoredProcedure;
+                sc.Parameters.Add(new SqlParameter("@NomeEstação", textboxNomeAdd.Text));
+                sc.Parameters.Add(new SqlParameter("@N_Linhas", textBoxNlinhas.Text));
+                sc.Parameters.Add(new SqlParameter("@N_Plataformas", textBoxNPlataformas.Text));
+
+                sc.ExecuteNonQuery();
+                con.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Someting went Wrong inserting Data");
+            }
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -101,13 +111,20 @@ namespace WinFormsApp1
 
         private void ButtonAdicionarBalcão_Click(object sender, EventArgs e)
         {
+            try { 
             String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
-            String Query = "insert into Balcão VALUES ("+textBoxNBalcão.Text+",'"+textBoxNomeEstaçãoBalcão.Text+"',"+textBoxNFuncionário.Text+")";
             SqlConnection con = new SqlConnection(connectionStr);
             con.Open();
+            String Query = "insert into Balcão VALUES (" + textBoxNBalcão.Text + ",'" + textBoxNomeEstaçãoBalcão.Text + "'," + textBoxNFuncionário.Text + ")";
+
             SqlCommand sc = new SqlCommand(Query, con);
             sc.ExecuteNonQuery();
             con.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Someting went Wrong inserting Data \n Tem a certeza que a Estação e o Funcionário Existem");
+            }
 
         }
 
