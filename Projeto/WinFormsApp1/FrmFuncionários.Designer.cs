@@ -32,7 +32,14 @@ namespace WinFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.ButtonRemoverFuncionário = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.ButtonAdicionarFuncionário = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -43,23 +50,16 @@ namespace WinFormsApp1
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.ButtonRemoverFuncionário = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.buttonRefreshTipos = new System.Windows.Forms.Button();
+            this.ButtonAdicionarTipoFuncionário = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.ButtonAdicionarTipoFuncionário = new System.Windows.Forms.Button();
-            this.buttonRefreshTipos = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -116,26 +116,78 @@ namespace WinFormsApp1
             this.tabPage1.Text = "Adicionar/Remover";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // ButtonRemoverFuncionário
             // 
-            this.tabPage2.Controls.Add(this.buttonRefreshTipos);
-            this.tabPage2.Controls.Add(this.ButtonAdicionarTipoFuncionário);
-            this.tabPage2.Controls.Add(this.textBox5);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.textBox4);
-            this.tabPage2.Controls.Add(this.label7);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.panel1);
-            this.tabPage2.Controls.Add(this.label6);
-            this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(690, 627);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tipo Funcionário";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.ButtonRemoverFuncionário.Location = new System.Drawing.Point(457, 553);
+            this.ButtonRemoverFuncionário.Name = "ButtonRemoverFuncionário";
+            this.ButtonRemoverFuncionário.Size = new System.Drawing.Size(127, 29);
+            this.ButtonRemoverFuncionário.TabIndex = 37;
+            this.ButtonRemoverFuncionário.Text = "Remover";
+            this.ButtonRemoverFuncionário.UseVisualStyleBackColor = true;
+            this.ButtonRemoverFuncionário.Click += new System.EventHandler(this.ButtonRemoverFuncionário_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(65, 553);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(300, 29);
+            this.textBox3.TabIndex = 36;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(65, 528);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(30, 22);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "ID";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.Maroon;
+            this.label4.Location = new System.Drawing.Point(65, 460);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(132, 32);
+            this.label4.TabIndex = 34;
+            this.label4.Text = "Remover";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(65, 396);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(187, 29);
+            this.textBox2.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(65, 371);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 22);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Salário";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(65, 262);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(463, 29);
+            this.textBox1.TabIndex = 31;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(65, 237);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 22);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "Morada";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // ButtonAdicionarFuncionário
             // 
@@ -222,96 +274,65 @@ namespace WinFormsApp1
             this.label15.TabIndex = 20;
             this.label15.Text = "Adicionar";
             // 
-            // textBox1
+            // tabPage2
             // 
-            this.textBox1.Location = new System.Drawing.Point(65, 262);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(463, 29);
-            this.textBox1.TabIndex = 31;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tabPage2.Controls.Add(this.buttonRefreshTipos);
+            this.tabPage2.Controls.Add(this.ButtonAdicionarTipoFuncionário);
+            this.tabPage2.Controls.Add(this.textBox5);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.textBox4);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.panel1);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(690, 627);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Tipo Funcionário";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // buttonRefreshTipos
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 237);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 22);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Morada";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.buttonRefreshTipos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.buttonRefreshTipos.Location = new System.Drawing.Point(472, 266);
+            this.buttonRefreshTipos.Name = "buttonRefreshTipos";
+            this.buttonRefreshTipos.Size = new System.Drawing.Size(127, 29);
+            this.buttonRefreshTipos.TabIndex = 43;
+            this.buttonRefreshTipos.Text = "Refresh";
+            this.buttonRefreshTipos.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // ButtonAdicionarTipoFuncionário
             // 
-            this.textBox2.Location = new System.Drawing.Point(65, 396);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(187, 29);
-            this.textBox2.TabIndex = 33;
+            this.ButtonAdicionarTipoFuncionário.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ButtonAdicionarTipoFuncionário.Location = new System.Drawing.Point(472, 170);
+            this.ButtonAdicionarTipoFuncionário.Name = "ButtonAdicionarTipoFuncionário";
+            this.ButtonAdicionarTipoFuncionário.Size = new System.Drawing.Size(127, 29);
+            this.ButtonAdicionarTipoFuncionário.TabIndex = 42;
+            this.ButtonAdicionarTipoFuncionário.Text = "Adicionar";
+            this.ButtonAdicionarTipoFuncionário.UseVisualStyleBackColor = true;
+            this.ButtonAdicionarTipoFuncionário.Click += new System.EventHandler(this.ButtonAdicionarTipoFuncionário_Click);
             // 
-            // label3
+            // textBox5
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 371);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 22);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Salário";
+            this.textBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.Location = new System.Drawing.Point(315, 119);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(209, 29);
+            this.textBox5.TabIndex = 41;
             // 
-            // label4
+            // label9
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.Maroon;
-            this.label4.Location = new System.Drawing.Point(65, 460);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 32);
-            this.label4.TabIndex = 34;
-            this.label4.Text = "Remover";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(65, 553);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(300, 29);
-            this.textBox3.TabIndex = 36;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(65, 528);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 22);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "ID";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // ButtonRemoverFuncionário
-            // 
-            this.ButtonRemoverFuncionário.Location = new System.Drawing.Point(457, 553);
-            this.ButtonRemoverFuncionário.Name = "ButtonRemoverFuncionário";
-            this.ButtonRemoverFuncionário.Size = new System.Drawing.Size(127, 29);
-            this.ButtonRemoverFuncionário.TabIndex = 37;
-            this.ButtonRemoverFuncionário.Text = "Remover";
-            this.ButtonRemoverFuncionário.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.Maroon;
-            this.label6.Location = new System.Drawing.Point(73, 263);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(247, 32);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Tipos Funcionário";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.PaleGreen;
-            this.panel1.Location = new System.Drawing.Point(63, 308);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(536, 264);
-            this.panel1.TabIndex = 36;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(315, 94);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 22);
+            this.label9.TabIndex = 40;
+            this.label9.Text = "Cargo";
             // 
             // textBox4
             // 
@@ -342,43 +363,24 @@ namespace WinFormsApp1
             this.label8.TabIndex = 37;
             this.label8.Text = "Adicionar";
             // 
-            // textBox5
+            // panel1
             // 
-            this.textBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(315, 119);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(209, 29);
-            this.textBox5.TabIndex = 41;
+            this.panel1.BackColor = System.Drawing.Color.PaleGreen;
+            this.panel1.Location = new System.Drawing.Point(63, 308);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(536, 264);
+            this.panel1.TabIndex = 36;
             // 
-            // label9
+            // label6
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(315, 94);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 22);
-            this.label9.TabIndex = 40;
-            this.label9.Text = "Cargo";
-            // 
-            // ButtonAdicionarTipoFuncionário
-            // 
-            this.ButtonAdicionarTipoFuncionário.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ButtonAdicionarTipoFuncionário.Location = new System.Drawing.Point(472, 170);
-            this.ButtonAdicionarTipoFuncionário.Name = "ButtonAdicionarTipoFuncionário";
-            this.ButtonAdicionarTipoFuncionário.Size = new System.Drawing.Size(127, 29);
-            this.ButtonAdicionarTipoFuncionário.TabIndex = 42;
-            this.ButtonAdicionarTipoFuncionário.Text = "Adicionar";
-            this.ButtonAdicionarTipoFuncionário.UseVisualStyleBackColor = true;
-            // 
-            // buttonRefreshTipos
-            // 
-            this.buttonRefreshTipos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonRefreshTipos.Location = new System.Drawing.Point(472, 266);
-            this.buttonRefreshTipos.Name = "buttonRefreshTipos";
-            this.buttonRefreshTipos.Size = new System.Drawing.Size(127, 29);
-            this.buttonRefreshTipos.TabIndex = 43;
-            this.buttonRefreshTipos.Text = "Refresh";
-            this.buttonRefreshTipos.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.Maroon;
+            this.label6.Location = new System.Drawing.Point(73, 263);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(247, 32);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Tipos Funcionário";
             // 
             // FrmFuncionários
             // 

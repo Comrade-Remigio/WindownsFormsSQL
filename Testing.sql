@@ -1,0 +1,32 @@
+DELETE FROM Estação WHERE Nome='Cacia'
+select * from Estação
+
+select * from Funcionário
+
+insert into Balcão VALUES (2,'Aveiro',10002)
+select * from Balcão
+
+insert into Passageiro VALUES ('12345678','Luis','Ferreira','Silva','919999999','2002-2-2')
+select * from Passageiro
+
+insert into Bilhete VALUES ('Aveiro','São Bento',1)
+
+
+insert into ViajaComBilhete VALUES (1,'12345678')
+
+select * from ViajaComBilhete
+
+select * from TipoFunc
+DELETE FROM TipoFunc WHERE Cargo='Reviso'
+
+GO
+CREATE PROCEDURE latestBilhete (@latestID INT OUTPUT)
+AS
+		
+	set @latestID = (select max(ID) from Bilhete)
+
+GO
+DECLARE @latestID int;
+EXEC latestBilhete @latestID OUTPUT;
+PRINT @latestID
+drop PROCEDURE latestBilhete;

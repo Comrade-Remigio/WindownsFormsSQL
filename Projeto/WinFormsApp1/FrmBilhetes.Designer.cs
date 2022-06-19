@@ -61,6 +61,10 @@ namespace WinFormsApp1
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.buttonRemoverCliente = new System.Windows.Forms.Button();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -75,10 +79,10 @@ namespace WinFormsApp1
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -112,6 +116,10 @@ namespace WinFormsApp1
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox17);
+            this.tabPage1.Controls.Add(this.label23);
+            this.tabPage1.Controls.Add(this.textBox16);
+            this.tabPage1.Controls.Add(this.label22);
             this.tabPage1.Controls.Add(this.textBox7);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
@@ -227,12 +235,13 @@ namespace WinFormsApp1
             // 
             // buttonCriarBilhete
             // 
-            this.buttonCriarBilhete.Location = new System.Drawing.Point(456, 200);
+            this.buttonCriarBilhete.Location = new System.Drawing.Point(456, 264);
             this.buttonCriarBilhete.Name = "buttonCriarBilhete";
             this.buttonCriarBilhete.Size = new System.Drawing.Size(127, 29);
             this.buttonCriarBilhete.TabIndex = 14;
             this.buttonCriarBilhete.Text = "Criar";
             this.buttonCriarBilhete.UseVisualStyleBackColor = true;
+            this.buttonCriarBilhete.Click += new System.EventHandler(this.buttonCriarBilhete_Click);
             // 
             // textBox3
             // 
@@ -421,6 +430,38 @@ namespace WinFormsApp1
             this.tabPage3.Text = "Adicionar Cliente";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // textBox15
+            // 
+            this.textBox15.Location = new System.Drawing.Point(408, 207);
+            this.textBox15.Name = "textBox15";
+            this.textBox15.Size = new System.Drawing.Size(140, 29);
+            this.textBox15.TabIndex = 27;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(408, 182);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(127, 22);
+            this.label21.TabIndex = 26;
+            this.label21.Text = "Último Nome";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(241, 207);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(140, 29);
+            this.textBox14.TabIndex = 25;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(241, 182);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(140, 22);
+            this.label20.TabIndex = 24;
+            this.label20.Text = "Nome do meio";
+            // 
             // buttonRemoverCliente
             // 
             this.buttonRemoverCliente.Location = new System.Drawing.Point(468, 481);
@@ -541,37 +582,39 @@ namespace WinFormsApp1
             this.label15.TabIndex = 10;
             this.label15.Text = "Adicionar";
             // 
-            // textBox14
+            // textBox16
             // 
-            this.textBox14.Location = new System.Drawing.Point(241, 207);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(140, 29);
-            this.textBox14.TabIndex = 25;
+            this.textBox16.Location = new System.Drawing.Point(425, 200);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(158, 29);
+            this.textBox16.TabIndex = 26;
+            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
             // 
-            // label20
+            // label22
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(241, 182);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(140, 22);
-            this.label20.TabIndex = 24;
-            this.label20.Text = "Nome do meio";
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(425, 175);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(148, 22);
+            this.label22.TabIndex = 25;
+            this.label22.Text = "Nº Passageiros";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
-            // textBox15
+            // textBox17
             // 
-            this.textBox15.Location = new System.Drawing.Point(408, 207);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(140, 29);
-            this.textBox15.TabIndex = 27;
+            this.textBox17.Location = new System.Drawing.Point(425, 399);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(158, 29);
+            this.textBox17.TabIndex = 28;
             // 
-            // label21
+            // label23
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(408, 182);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(127, 22);
-            this.label21.TabIndex = 26;
-            this.label21.Text = "Último Nome";
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(425, 374);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(148, 22);
+            this.label23.TabIndex = 27;
+            this.label23.Text = "Nº Passageiros";
             // 
             // FrmBilhetes
             // 
@@ -647,5 +690,9 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.Label label23;
     }
 }

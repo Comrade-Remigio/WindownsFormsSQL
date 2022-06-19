@@ -37,11 +37,11 @@ namespace WinFormsApp1
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.buttonAdicionarEstação = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxNPlataformas = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxNlinhas = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textboxNomeAdd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -52,11 +52,11 @@ namespace WinFormsApp1
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.ButtonAdicionarBalcão = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBoxNFuncionário = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBoxNBalcão = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBoxNomeEstaçãoBalcão = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -96,11 +96,11 @@ namespace WinFormsApp1
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.buttonAdicionarEstação);
-            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.textBoxNPlataformas);
             this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.textBox2);
+            this.tabPage1.Controls.Add(this.textBoxNlinhas);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.textboxNomeAdd);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -130,6 +130,7 @@ namespace WinFormsApp1
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(372, 29);
             this.textBox4.TabIndex = 10;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label7
             // 
@@ -162,12 +163,12 @@ namespace WinFormsApp1
             this.buttonAdicionarEstação.UseVisualStyleBackColor = true;
             this.buttonAdicionarEstação.Click += new System.EventHandler(this.buttonAdicionarEstação_Click);
             // 
-            // textBox3
+            // textBoxNPlataformas
             // 
-            this.textBox3.Location = new System.Drawing.Point(264, 224);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 29);
-            this.textBox3.TabIndex = 6;
+            this.textBoxNPlataformas.Location = new System.Drawing.Point(264, 224);
+            this.textBoxNPlataformas.Name = "textBoxNPlataformas";
+            this.textBoxNPlataformas.Size = new System.Drawing.Size(176, 29);
+            this.textBoxNPlataformas.TabIndex = 6;
             // 
             // label5
             // 
@@ -179,12 +180,12 @@ namespace WinFormsApp1
             this.label5.Text = "Nº Plataformas";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox2
+            // textBoxNlinhas
             // 
-            this.textBox2.Location = new System.Drawing.Point(68, 224);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 29);
-            this.textBox2.TabIndex = 4;
+            this.textBoxNlinhas.Location = new System.Drawing.Point(68, 224);
+            this.textBoxNlinhas.Name = "textBoxNlinhas";
+            this.textBoxNlinhas.Size = new System.Drawing.Size(148, 29);
+            this.textBoxNlinhas.TabIndex = 4;
             // 
             // label4
             // 
@@ -196,12 +197,12 @@ namespace WinFormsApp1
             this.label4.Text = "Nº Linhas";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // textBox1
+            // textboxNomeAdd
             // 
-            this.textBox1.Location = new System.Drawing.Point(68, 140);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(372, 29);
-            this.textBox1.TabIndex = 2;
+            this.textboxNomeAdd.Location = new System.Drawing.Point(68, 140);
+            this.textboxNomeAdd.Name = "textboxNomeAdd";
+            this.textboxNomeAdd.Size = new System.Drawing.Size(372, 29);
+            this.textboxNomeAdd.TabIndex = 2;
             // 
             // label3
             // 
@@ -245,11 +246,11 @@ namespace WinFormsApp1
             this.tabPage3.Controls.Add(this.label16);
             this.tabPage3.Controls.Add(this.label15);
             this.tabPage3.Controls.Add(this.ButtonAdicionarBalcão);
-            this.tabPage3.Controls.Add(this.textBox7);
+            this.tabPage3.Controls.Add(this.textBoxNFuncionário);
             this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.textBox6);
+            this.tabPage3.Controls.Add(this.textBoxNBalcão);
             this.tabPage3.Controls.Add(this.label13);
-            this.tabPage3.Controls.Add(this.textBox5);
+            this.tabPage3.Controls.Add(this.textBoxNomeEstaçãoBalcão);
             this.tabPage3.Controls.Add(this.label12);
             this.tabPage3.Controls.Add(this.label11);
             this.tabPage3.Controls.Add(this.label10);
@@ -321,13 +322,13 @@ namespace WinFormsApp1
             this.ButtonAdicionarBalcão.UseVisualStyleBackColor = true;
             this.ButtonAdicionarBalcão.Click += new System.EventHandler(this.ButtonAdicionarBalcão_Click);
             // 
-            // textBox7
+            // textBoxNFuncionário
             // 
-            this.textBox7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.Location = new System.Drawing.Point(240, 214);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(194, 29);
-            this.textBox7.TabIndex = 12;
+            this.textBoxNFuncionário.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNFuncionário.Location = new System.Drawing.Point(240, 214);
+            this.textBoxNFuncionário.Name = "textBoxNFuncionário";
+            this.textBoxNFuncionário.Size = new System.Drawing.Size(194, 29);
+            this.textBoxNFuncionário.TabIndex = 12;
             // 
             // label14
             // 
@@ -339,13 +340,13 @@ namespace WinFormsApp1
             this.label14.TabIndex = 11;
             this.label14.Text = "Nº Funcionário";
             // 
-            // textBox6
+            // textBoxNBalcão
             // 
-            this.textBox6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.Location = new System.Drawing.Point(68, 214);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(156, 29);
-            this.textBox6.TabIndex = 10;
+            this.textBoxNBalcão.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNBalcão.Location = new System.Drawing.Point(68, 214);
+            this.textBoxNBalcão.Name = "textBoxNBalcão";
+            this.textBoxNBalcão.Size = new System.Drawing.Size(156, 29);
+            this.textBoxNBalcão.TabIndex = 10;
             // 
             // label13
             // 
@@ -358,14 +359,14 @@ namespace WinFormsApp1
             this.label13.Text = "Nº Balcão";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
-            // textBox5
+            // textBoxNomeEstaçãoBalcão
             // 
-            this.textBox5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(68, 144);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(366, 29);
-            this.textBox5.TabIndex = 8;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.textBoxNomeEstaçãoBalcão.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxNomeEstaçãoBalcão.Location = new System.Drawing.Point(68, 144);
+            this.textBoxNomeEstaçãoBalcão.Name = "textBoxNomeEstaçãoBalcão";
+            this.textBoxNomeEstaçãoBalcão.Size = new System.Drawing.Size(366, 29);
+            this.textBoxNomeEstaçãoBalcão.TabIndex = 8;
+            this.textBoxNomeEstaçãoBalcão.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label12
             // 
@@ -445,11 +446,11 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textboxNomeAdd;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxNlinhas;
         private System.Windows.Forms.Button buttonAdicionarEstação;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxNPlataformas;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button ButtonRemoverEstação;
         private System.Windows.Forms.TextBox textBox4;
@@ -459,13 +460,13 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBoxNomeEstaçãoBalcão;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button ButtonAdicionarBalcão;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBoxNFuncionário;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBoxNBalcão;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox8;

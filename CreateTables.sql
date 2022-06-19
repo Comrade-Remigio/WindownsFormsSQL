@@ -36,6 +36,7 @@ CREATE TABLE Balcão (
 			Número int NOT NULL,
 			NomeEstação VARCHAR(255) NOT NULL,
 			FuncId int NOT NULL,
+			PRIMARY KEY (Número, NomeEstação),
 			FOREIGN KEY (NomeEstação) REFERENCES Estação(Nome) ON DELETE CASCADE,
 			FOREIGN KEY (FuncId) REFERENCES Funcionário(ID) ON DELETE CASCADE
 );
