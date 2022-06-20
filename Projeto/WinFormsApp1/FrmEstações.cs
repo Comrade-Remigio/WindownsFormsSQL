@@ -111,15 +111,20 @@ namespace WinFormsApp1
 
         private void ButtonAdicionarBalcão_Click(object sender, EventArgs e)
         {
-            try { 
             String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
-            SqlConnection con = new SqlConnection(connectionStr);
-            con.Open();
-            String Query = "insert into Balcão VALUES (" + textBoxNBalcão.Text + ",'" + textBoxNomeEstaçãoBalcão.Text + "'," + textBoxNFuncionário.Text + ")";
+            try
+            { 
+                SqlConnection con = new SqlConnection(connectionStr);
+                con.Open();
+                SqlCommand sc = new SqlCommand("CreateBalcao", con);
+                sc.CommandType = CommandType.StoredProcedure;
+                sc.Parameters.Add(new SqlParameter("@NomeEstação", textBoxNomeEstaçãoBalcão.Text));
+                sc.Parameters.Add(new SqlParameter("@N_Balcao", textBoxNBalcão.Text));
+                sc.Parameters.Add(new SqlParameter("@N_Funcionario", textBoxNFuncionário.Text));
 
-            SqlCommand sc = new SqlCommand(Query, con);
-            sc.ExecuteNonQuery();
-            con.Close();
+                sc.ExecuteNonQuery();
+                con.Close();
+
             }
             catch
             {
@@ -130,6 +135,60 @@ namespace WinFormsApp1
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void BalcãoGrid()
+        {
+            String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
+            SqlCommand command = new SqlCommand("select * from Balcão");
+        //    SqlConnection con = new SqlConnection(connectionStr);
+         //   con.Open();
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+         //   con.Close();
+        }
+
+        public DataTable SelectAll()
+        {
+            String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
+
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionStr))
+                {
+                    con.Open();
+                    using (SqlCommand cmd = con.CreateCommand())
+                    {
+                        //sample stored procedure with parameter:
+                        // "exec yourstoredProcedureName '" + param1+ "','" + param2+ "'";
+                        cmd.CommandText = "select * from Balcão";
+                        using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
+                        {
+                            adp.Fill(dt);
+                            return dt;
+                        }
+                    }
+                }
+            }
+            catch (Exception sqlEx)
+            {
+                Console.WriteLine(@"：Unable to establish a connection: {0}", sqlEx);
+            }
+
+            return dt;
+
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
+            DataTable dt = SelectAll();
+            dataGridView1.DataSource = dt;
 
         }
     }

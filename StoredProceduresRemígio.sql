@@ -21,12 +21,14 @@ EXEC CreateEstacao @NomeEstação,@N_Linhas,@N_Plataformas*/
 
 
 GO
-CREATE PROCEDURE CreateBalcao(@NomeEstação VARCHAR(255), @N_Linhas int , @N_Plataformas INT)
+CREATE PROCEDURE CreateBalcao(@NomeEstação VARCHAR(255), @N_Balcao int , @N_Funcionario INT)
 		AS
 		BEGIN
 
-			 INSERT INTO Estação VALUES(@NomeEstação, @N_Linhas, @N_Plataformas);
+			 INSERT INTO Balcão VALUES(@N_Balcao, @NomeEstação, @N_Funcionario);
 			 PRINT 'Sucess'
 
 		END 
 GO
+
+-- DROP PROCEDURE CreateBalcao
