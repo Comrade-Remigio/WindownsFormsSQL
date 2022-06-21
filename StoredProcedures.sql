@@ -158,7 +158,7 @@ BEGIN
 		END
 	ELSE
 		BEGIN
-			insert into Bilhete(EstaçãoChegada,EstaçãoPartida) VALUES (@partida,@chegada)
+			insert into Bilhete(EstaçãoPartida,EstaçãoChegada) VALUES (@partida,@chegada)
 			DECLARE @ID as int
 			SET @ID= 
 			(SELECT max(Bilhete.ID) as IDD FROM Bilhete); 
@@ -193,23 +193,25 @@ GO
 
 GO
 
-CREATE PROCEDURE UpdateBilhete (@numcc VARCHAR(8), @partida VARCHAR(255), @chegada VARCHAR(255) , @idBilhete int) 
+CREATE PROCEDURE UpdateBilhete (@numcc VARCHAR(8), @partida VARCHAR(255), @chegada VARCHAR(255) , @idBilhete int,@output varchar(250) OUTPUT) 
 	
     
 AS
 BEGIN
-	DELETE FROM ViajaComBilhete WHERE (ID_Bilhete = @idBilhete AND NUM_CC = @numcc)
+	
 	IF NOT EXISTS(
 		SELECT * 
 		FROM Passageiro
 		WHERE Num_CC = @numcc)
 		BEGIN
-			PRINT 'No such Passenger'
+			set @output = 'No such Passenger'
 		END
 	ELSE
 		BEGIN
-			update Bilhete set EstaçãoChegada = @partida, EstaçãoPartida = @chegada where ID = @idBilhete
+			DELETE FROM ViajaComBilhete WHERE (ID_Bilhete = @idBilhete AND NUM_CC = @numcc)
+			update Bilhete set EstaçãoChegada = @chegada, EstaçãoPartida = @partida where ID = @idBilhete
 			INSERT INTO ViajaComBilhete VALUES(@idBilhete ,@numcc)
+			set @output = 'Bilhete Updated'
 		END
 	
 	
@@ -218,6 +220,7 @@ END
 
 	
 GO
+-- drop procedure UpdateBilhete
 GO
 
 CREATE PROCEDURE AddNewEmployee ( @id int , @fname VARCHAR(50), @mname VARCHAR(50) , @lname VARCHAR(50) , @salario int , @data_nascimento Date, @num_tel VARCHAR(9) , @morada VARCHAR(250) , @funcid int) 

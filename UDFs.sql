@@ -86,8 +86,15 @@ GO
 CREATE FUNCTION FindTicketsById (@id INT) RETURNS TABLE 
 AS
     
-	RETURN (SELECT   *
-			FROM Bilhete
+	RETURN (SELECT  EstaçãoPartida, EstaçãoChegada, Passageiro.Num_CC, Passageiro.FName,Passageiro.LName
+			FROM 
+			Bilhete 
+			join
+			ViajaComBilhete 
+			on Bilhete.ID =ViajaComBilhete.ID_Bilhete
+			join 
+			Passageiro
+			on Passageiro.Num_CC = ViajaComBilhete.NUM_CC 
             where Bilhete.id =@id)
 GO
 

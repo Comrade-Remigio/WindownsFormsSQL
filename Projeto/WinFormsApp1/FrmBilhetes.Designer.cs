@@ -32,8 +32,6 @@ namespace WinFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -54,14 +52,18 @@ namespace WinFormsApp1
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.ButtonInfoBilhete = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ButtonVerBilhetesCC = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label22 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -84,6 +86,12 @@ namespace WinFormsApp1
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,8 +122,6 @@ namespace WinFormsApp1
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox17);
-            this.tabPage1.Controls.Add(this.label23);
             this.tabPage1.Controls.Add(this.textBox7);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
@@ -143,28 +149,13 @@ namespace WinFormsApp1
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Criar/Eliminar";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(425, 399);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(158, 29);
-            this.textBox17.TabIndex = 28;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(425, 374);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(148, 22);
-            this.label23.TabIndex = 27;
-            this.label23.Text = "Nº Passageiros";
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // textBox7
             // 
             this.textBox7.Location = new System.Drawing.Point(56, 399);
             this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(341, 29);
+            this.textBox7.Size = new System.Drawing.Size(444, 29);
             this.textBox7.TabIndex = 24;
             // 
             // label10
@@ -196,6 +187,7 @@ namespace WinFormsApp1
             this.button1.TabIndex = 21;
             this.button1.Text = "Criar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox4
             // 
@@ -339,10 +331,22 @@ namespace WinFormsApp1
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGreen;
+            this.panel2.Controls.Add(this.dataGridView2);
             this.panel2.Location = new System.Drawing.Point(64, 432);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(552, 133);
             this.panel2.TabIndex = 19;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.LightGreen;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 25;
+            this.dataGridView2.Size = new System.Drawing.Size(552, 133);
+            this.dataGridView2.TabIndex = 22;
             // 
             // ButtonInfoBilhete
             // 
@@ -352,6 +356,7 @@ namespace WinFormsApp1
             this.ButtonInfoBilhete.TabIndex = 21;
             this.ButtonInfoBilhete.Text = "Ver Info";
             this.ButtonInfoBilhete.UseVisualStyleBackColor = true;
+            this.ButtonInfoBilhete.Click += new System.EventHandler(this.ButtonInfoBilhete_Click);
             // 
             // textBox9
             // 
@@ -372,10 +377,21 @@ namespace WinFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGreen;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(64, 129);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(552, 133);
             this.panel1.TabIndex = 18;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightGreen;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(552, 133);
+            this.dataGridView1.TabIndex = 22;
             // 
             // ButtonVerBilhetesCC
             // 
@@ -385,6 +401,7 @@ namespace WinFormsApp1
             this.ButtonVerBilhetesCC.TabIndex = 17;
             this.ButtonVerBilhetesCC.Text = "Ver Bilhetes";
             this.ButtonVerBilhetesCC.UseVisualStyleBackColor = true;
+            this.ButtonVerBilhetesCC.Click += new System.EventHandler(this.ButtonVerBilhetesCC_Click);
             // 
             // textBox8
             // 
@@ -404,7 +421,9 @@ namespace WinFormsApp1
             // 
             // tabPage2
             // 
-            this.tabPage2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tabPage2.Controls.Add(this.label22);
+            this.tabPage2.Controls.Add(this.dataGridView3);
+            this.tabPage2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabPage2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
@@ -413,6 +432,27 @@ namespace WinFormsApp1
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Listar";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label22.ForeColor = System.Drawing.Color.Maroon;
+            this.label22.Location = new System.Drawing.Point(44, 20);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(120, 32);
+            this.label22.TabIndex = 11;
+            this.label22.Text = "Bilhetes";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 55);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 25;
+            this.dataGridView3.Size = new System.Drawing.Size(674, 552);
+            this.dataGridView3.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -482,6 +522,7 @@ namespace WinFormsApp1
             this.buttonRemoverCliente.TabIndex = 23;
             this.buttonRemoverCliente.Text = "Remover";
             this.buttonRemoverCliente.UseVisualStyleBackColor = true;
+            this.buttonRemoverCliente.Click += new System.EventHandler(this.buttonRemoverCliente_Click);
             // 
             // textBox13
             // 
@@ -518,6 +559,7 @@ namespace WinFormsApp1
             this.ButtonAdicionarCliente.TabIndex = 19;
             this.ButtonAdicionarCliente.Text = "Adicionar";
             this.ButtonAdicionarCliente.UseVisualStyleBackColor = true;
+            this.ButtonAdicionarCliente.Click += new System.EventHandler(this.ButtonAdicionarCliente_Click);
             // 
             // label17
             // 
@@ -609,6 +651,13 @@ namespace WinFormsApp1
             this.tabPage1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
@@ -668,7 +717,9 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }
