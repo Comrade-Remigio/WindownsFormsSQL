@@ -32,6 +32,10 @@ namespace WinFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -79,10 +83,6 @@ namespace WinFormsApp1
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -147,6 +147,40 @@ namespace WinFormsApp1
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Criar/Eliminar";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // textBox17
+            // 
+            this.textBox17.Location = new System.Drawing.Point(425, 399);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(158, 29);
+            this.textBox17.TabIndex = 28;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(425, 374);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(148, 22);
+            this.label23.TabIndex = 27;
+            this.label23.Text = "Nº Passageiros";
+            // 
+            // textBox16
+            // 
+            this.textBox16.Location = new System.Drawing.Point(425, 200);
+            this.textBox16.Name = "textBox16";
+            this.textBox16.Size = new System.Drawing.Size(158, 29);
+            this.textBox16.TabIndex = 26;
+            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(425, 175);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(148, 22);
+            this.label22.TabIndex = 25;
+            this.label22.Text = "Nº Passageiros";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // textBox7
             // 
@@ -581,40 +615,6 @@ namespace WinFormsApp1
             this.label15.Size = new System.Drawing.Size(140, 32);
             this.label15.TabIndex = 10;
             this.label15.Text = "Adicionar";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(425, 200);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(158, 29);
-            this.textBox16.TabIndex = 26;
-            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(425, 175);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(148, 22);
-            this.label22.TabIndex = 25;
-            this.label22.Text = "Nº Passageiros";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
-            // 
-            // textBox17
-            // 
-            this.textBox17.Location = new System.Drawing.Point(425, 399);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(158, 29);
-            this.textBox17.TabIndex = 28;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(425, 374);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(148, 22);
-            this.label23.TabIndex = 27;
-            this.label23.Text = "Nº Passageiros";
             // 
             // FrmBilhetes
             // 

@@ -32,3 +32,62 @@ CREATE PROCEDURE CreateBalcao(@NomeEstação VARCHAR(255), @N_Balcao int , @N_Func
 GO
 
 -- DROP PROCEDURE CreateBalcao
+
+GO
+CREATE PROCEDURE CreateComboio(@Revisor int , @Condutor INT)
+		AS
+		BEGIN
+
+			 INSERT INTO Comboio VALUES(@Revisor, @Condutor);
+			 PRINT 'Sucess'
+
+		END 
+GO
+
+
+/*DECLARE @Revisor INT;
+DECLARE @Condutor INT;
+SET @Condutor = null;
+SET @Revisor = null;
+exec CreateComboio @Revisor,@Condutor 
+select * from Comboio
+select * from Funcionário
+DELETE FROM Comboio where id=5
+DROP PROCEDURE CreateComboio */
+
+
+GO
+CREATE PROCEDURE alterComboio(@ID Int,@Revisor int , @Condutor INT)
+AS
+	BEGIN
+
+			DECLARE @Revisor_old AS int;  
+			DECLARE @Condutor_old AS int;  
+
+			SELECT @Revisor_old = Revisor_ID, @Condutor_old = Condutor_ID
+			FROM Comboio
+			WHERE Comboio.ID = @ID;
+
+	
+			UPDATE Comboio SET Revisor_ID = @Revisor WHERE ID = @ID;
+			PRINT 'Revisor updated with success '  
+
+			UPDATE Comboio SET Condutor_ID = @Condutor  WHERE ID = @ID;
+				PRINT 'Condutor updated with success '  
+	
+		 
+
+
+	END
+go
+-- drop procedure alterComboio
+/*DECLARE @Revisor INT;
+DECLARE @Condutor INT;
+DECLARE @ID INT;
+SET @Condutor = 10002;
+SET @ID = 6;
+SET @Revisor = 10002;
+exec alterComboio @ID, @Revisor,@Condutor
+
+select * from Comboio
+*/

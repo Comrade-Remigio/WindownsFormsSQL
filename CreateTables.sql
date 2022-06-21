@@ -87,8 +87,8 @@ CREATE TABLE ViajaComBilhete (
 
 CREATE TABLE Comboio (
 			ID int IDENTITY(1,1) not null,
-			Condutor_ID int NOT NULL,
-			Revisor_ID int NOT NULL,
+			Condutor_ID int,
+			Revisor_ID int,
 
 			PRIMARY KEY (ID),
 
