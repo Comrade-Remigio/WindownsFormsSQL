@@ -16,6 +16,8 @@ namespace WinFormsApp1
         public FrmComboios()
         {
             InitializeComponent();
+            DataTable dt2 = SelectAllComboios();
+            dataGridComboios.DataSource = dt2;
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -25,6 +27,41 @@ namespace WinFormsApp1
 
         private void label21_Click(object sender, EventArgs e)
         {
+
+        }
+
+
+        public DataTable SelectAllComboios()
+        {
+            String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
+
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionStr))
+                {
+                    con.Open();
+                    using (SqlCommand cmd = con.CreateCommand())
+                    {
+                        //sample stored procedure with parameter:
+                        // "exec yourstoredProcedureName '" + param1+ "','" + param2+ "'";
+ 
+                            cmd.CommandText = "select * from ListComboios ()";
+                            using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
+                            {
+                                adp.Fill(dt);
+                                return dt;
+                            
+                        }
+                    }
+                }
+            }
+            catch (Exception sqlEx)
+            {
+                Console.WriteLine(@"：Unable to establish a connection: {0}", sqlEx);
+            }
+
+            return dt;
 
         }
 
@@ -114,6 +151,12 @@ namespace WinFormsApp1
                 MessageBox.Show("Someting went Wrong inserting Data \n Tenha a certeza que o Comboio ou Funcionários existem");
             }
 
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            DataTable dt2 = SelectAllComboios();
+            dataGridComboios.DataSource = dt2;
         }
     }
 }

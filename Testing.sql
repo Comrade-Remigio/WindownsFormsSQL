@@ -30,3 +30,6 @@ DECLARE @latestID int;
 EXEC latestBilhete @latestID OUTPUT;
 PRINT @latestID
 drop PROCEDURE latestBilhete;
+
+insert into Carruagem VALUES (6,1)
+SELECT * FROM Carruagem
