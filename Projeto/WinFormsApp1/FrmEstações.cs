@@ -15,6 +15,11 @@ namespace WinFormsApp1
         public FrmEstações()
         {
             InitializeComponent();
+            DataTable dt = SelectAll();
+            dataGridView1.DataSource = dt;
+
+            DataTable dt2 = SelectAllEstacoes();
+            dataGridView2.DataSource = dt2;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -138,7 +143,7 @@ namespace WinFormsApp1
 
         }
 
-        private void BalcãoGrid()
+    /*    private void BalcãoGrid()
         {
             String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
             SqlCommand command = new SqlCommand("select * from Balcão");
@@ -149,7 +154,7 @@ namespace WinFormsApp1
             da.Fill(dt);
             dataGridView1.DataSource = dt;
          //   con.Close();
-        }
+        }*/
 
         public DataTable SelectAll()
         {
@@ -165,11 +170,22 @@ namespace WinFormsApp1
                     {
                         //sample stored procedure with parameter:
                         // "exec yourstoredProcedureName '" + param1+ "','" + param2+ "'";
-                        cmd.CommandText = "select * from Balcão";
-                        using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
+                        if (textBox8.Text == "") {                         
+                            cmd.CommandText = "select * from Balcão";
+                            using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
+                            {
+                                adp.Fill(dt);
+                                return dt;
+                            }
+                        }
+                        else
                         {
-                            adp.Fill(dt);
-                            return dt;
+                            cmd.CommandText = "select * from FuncSearchBalcao('"+textBox8.Text+"')";
+                            using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
+                            {
+                                adp.Fill(dt);
+                                return dt;
+                            }
                         }
                     }
                 }
@@ -190,6 +206,62 @@ namespace WinFormsApp1
             DataTable dt = SelectAll();
             dataGridView1.DataSource = dt;
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        public DataTable SelectAllEstacoes()
+        {
+            String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
+
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionStr))
+                {
+                    con.Open();
+                    using (SqlCommand cmd = con.CreateCommand())
+                    {
+                        //sample stored procedure with parameter:
+                        // "exec yourstoredProcedureName '" + param1+ "','" + param2+ "'";
+                        if (textBox1.Text == "")
+                        {
+                            cmd.CommandText = "select * from Estação";
+                            using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
+                            {
+                                adp.Fill(dt);
+                                return dt;
+                            }
+                        }
+                        else
+                        {
+                            cmd.CommandText = "select * from FuncSearchEstacoes('" + textBox1.Text + "')";
+                            using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
+                            {
+                                adp.Fill(dt);
+                                return dt;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception sqlEx)
+            {
+                Console.WriteLine(@"：Unable to establish a connection: {0}", sqlEx);
+            }
+
+            return dt;
+
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            DataTable dt = SelectAllEstacoes();
+            dataGridView2.DataSource = dt;
         }
     }
 }
