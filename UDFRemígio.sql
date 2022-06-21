@@ -22,8 +22,10 @@ go
 
 Create FUNCTION ListComboios () RETURNS TABLE
 AS 
-	RETURN (SELECT ID, Revisor_ID AS Revisor, Condutor_ID AS Condutor, count(Carruagem.Comboio_ID) AS Carruagens FROM (Comboio join Carruagem ON Comboio.ID = Carruagem.Comboio_ID) GROUP BY ID, Revisor_ID, Condutor_ID )
+	RETURN (SELECT ID, Revisor_ID AS Revisor, Condutor_ID AS Condutor, count(Carruagem.Comboio_ID) AS Carruagens FROM (Comboio left join Carruagem ON Comboio.ID = Carruagem.Comboio_ID) GROUP BY ID, Revisor_ID, Condutor_ID )
 GO
 
 -- drop Function ListComboios
 -- select * from ListComboios ()
+--	select * FROM (Comboio left join Carruagem ON Comboio.ID = Carruagem.Comboio_ID)
+-- select * from Comboio

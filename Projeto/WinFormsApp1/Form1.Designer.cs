@@ -230,6 +230,7 @@ namespace WinFormsApp1
             this.ClientSize = new System.Drawing.Size(909, 655);
             this.Controls.Add(this.panelForms);
             this.Controls.Add(this.PanelPrincipal);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Rede Comboios";
             this.Load += new System.EventHandler(this.Form1_Load);
