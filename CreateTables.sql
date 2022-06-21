@@ -46,13 +46,10 @@ CREATE TABLE Bilhete (
 			ID INT IDENTITY(1,1) NOT NULL,
 			EstaçãoPartida VARCHAR(255) NOT NULL,
 			EstaçãoChegada VARCHAR(255) NOT NULL,
-			N_Passageiros INT NOT NULL,
 			PRIMARY KEY (ID),
 			FOREIGN KEY (EstaçãoPartida) REFERENCES Estação(Nome) ON DELETE  NO ACTION,
 			FOREIGN KEY (EstaçãoChegada) REFERENCES Estação(Nome) ON DELETE  NO ACTION,
 			CONSTRAINT checkTraj  check (EstaçãoPartida != EstaçãoChegada),
-			CONSTRAINT CheckPass  check (N_Passageiros >= 0) ,
-
 
 );
 

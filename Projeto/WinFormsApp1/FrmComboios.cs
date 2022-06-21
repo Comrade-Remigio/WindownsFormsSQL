@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -18,6 +19,8 @@ namespace WinFormsApp1
             InitializeComponent();
             DataTable dt2 = SelectAllComboios();
             dataGridComboios.DataSource = dt2;
+            DataTable dt3 = SelectAllCarruagens();
+            dataGridView1.DataSource = dt3;
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -157,6 +160,85 @@ namespace WinFormsApp1
         {
             DataTable dt2 = SelectAllComboios();
             dataGridComboios.DataSource = dt2;
+        }
+
+
+        public DataTable SelectAllCarruagens()
+        {
+            String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
+
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionStr))
+                {
+                    con.Open();
+                    using (SqlCommand cmd = con.CreateCommand())
+                    {
+                        //sample stored procedure with parameter:
+                        // "exec yourstoredProcedureName '" + param1+ "','" + param2+ "'";
+
+                        cmd.CommandText = "select * from ListCarruagens ()";
+                        using (SqlDataAdapter adp = new SqlDataAdapter(cmd))
+                        {
+                            adp.Fill(dt);
+                            return dt;
+
+                        }
+                    }
+                }
+            }
+            catch (Exception sqlEx)
+            {
+                Console.WriteLine(@"：Unable to establish a connection: {0}", sqlEx);
+            }
+
+            return dt;
+
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
+            try
+            {
+                SqlConnection con = new SqlConnection(connectionStr);
+                con.Open();
+                SqlCommand sc = new SqlCommand("CreateCarruagem", con);
+                sc.CommandType = CommandType.StoredProcedure;
+                sc.Parameters.Add(new SqlParameter("@ComboioID", textBox9.Text));
+                sc.Parameters.Add(new SqlParameter("@NLugares", textBox10.Text));
+
+                sc.ExecuteNonQuery();
+                con.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Someting went Wrong inserting Data");
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try { 
+            String connectionStr = ConfigurationManager.ConnectionStrings["DatabaseConnectionString"].ConnectionString;
+            String Query = "delete from Carruagem where (Carruagem.N_Carruagem = "+textBox11.Text+ " and Comboio_ID = "+ textBox12.Text  +" ) ";
+            SqlConnection con = new SqlConnection(connectionStr);
+            con.Open();
+            SqlCommand sc = new SqlCommand(Query, con);
+            sc.ExecuteNonQuery();
+            con.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Someting went Wrong Deleting Data");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DataTable dt2 = SelectAllCarruagens();
+            dataGridView1.DataSource = dt2;
         }
     }
 }

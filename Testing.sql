@@ -33,3 +33,5 @@ drop PROCEDURE latestBilhete;
 
 insert into Carruagem VALUES (6,1)
 SELECT * FROM Carruagem
+
+delete from Carruagem where (Carruagem.N_Carruagem = 1002 and Comboio_ID = 4)	

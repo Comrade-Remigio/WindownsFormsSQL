@@ -34,8 +34,6 @@ namespace WinFormsApp1
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -118,8 +116,6 @@ namespace WinFormsApp1
             // 
             this.tabPage1.Controls.Add(this.textBox17);
             this.tabPage1.Controls.Add(this.label23);
-            this.tabPage1.Controls.Add(this.textBox16);
-            this.tabPage1.Controls.Add(this.label22);
             this.tabPage1.Controls.Add(this.textBox7);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label9);
@@ -163,24 +159,6 @@ namespace WinFormsApp1
             this.label23.Size = new System.Drawing.Size(148, 22);
             this.label23.TabIndex = 27;
             this.label23.Text = "Nº Passageiros";
-            // 
-            // textBox16
-            // 
-            this.textBox16.Location = new System.Drawing.Point(425, 200);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(158, 29);
-            this.textBox16.TabIndex = 26;
-            this.textBox16.TextChanged += new System.EventHandler(this.textBox16_TextChanged);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(425, 175);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(148, 22);
-            this.label22.TabIndex = 25;
-            this.label22.Text = "Nº Passageiros";
-            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // textBox7
             // 
@@ -690,8 +668,6 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label23;
     }

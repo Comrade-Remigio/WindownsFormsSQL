@@ -30,8 +30,8 @@ INSERT INTO Balcão VALUES (1,'Aveiro',10001);
 -- SELECT * FROM Balcão;
 -- SELECT * FROM Balcão, Funcionário Where Balcão.FuncId = Funcionário.ID;
 
-INSERT INTO Bilhete VALUES ('Aveiro','São Bento',1);
-INSERT INTO Bilhete VALUES ('Aveiro','Ovar',1);
+INSERT INTO Bilhete VALUES ('Aveiro','São Bento');
+INSERT INTO Bilhete VALUES ('Aveiro','Ovar');
 
 -- SELECT * FROM Bilhete
 -- SELECT * FROM Bilhete WHERE EstaçãoChegada = 'Ovar' 
