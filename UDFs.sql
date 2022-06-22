@@ -114,3 +114,24 @@ AS
 	RETURN (SELECT Estação AS Paragens FROM FazParagem where TrajetoID =@id )
 
 GO
+
+
+
+go
+CREATE FUNCTION GetHorário (@partida varchar(250), @chegada varchar(250)) returns table 
+as 
+	
+		return(
+		select * from
+		(select ID , COUNT(FazParagem.TrajetoID)  as Numero, HoraChegada,HoraSaida,EstaçãoPartida,EstaçãoChegada from (Trajeto join FazParagem on ID = TrajetoID ),HorárioTrajeto where (Estação = @chegada or Estação = @partida )  GROUP BY ID, HoraChegada,HoraSaida,EstaçãoPartida,EstaçãoChegada ) as Nome where Numero >1 )
+	
+go
+-- drop Function GetHorário
+create Function GetHorasTrajeto (@id int) returns table
+as 
+	return (
+		select EstaçãoChegada, EstaçãoPartida ,HoraSaida,HoraChegada from (select * from Trajeto, HorárioTrajeto where TrajetoID = ID ) as nn where ID = @id
+	)
+go
+
+-- drop Function GetHorasTrajeto

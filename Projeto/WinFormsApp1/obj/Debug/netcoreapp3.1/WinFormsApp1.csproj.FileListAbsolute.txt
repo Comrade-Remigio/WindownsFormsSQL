@@ -69,3 +69,4 @@ C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\obj\D
 C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.FrmFuncionários.resources
 C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.FrmHorários.resources
 C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.FrmTrajetos.resources
+C:\Users\RafaelCoelho\Desktop\GitHub\BD_ProjectoFinal\Projeto\WinFormsApp1\obj\Debug\netcoreapp3.1\WinFormsApp1.HorariosData.resources

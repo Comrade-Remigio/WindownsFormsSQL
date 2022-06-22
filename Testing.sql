@@ -51,3 +51,4 @@ print  @latestID
 select * from GetParagens (1014)
 
 select ID, EstaçãoPartida AS Partida,EstaçãoChegada as Chegada from Trajeto
+
