@@ -236,7 +236,7 @@ END
 GO
 GO
 
-CREATE PROCEDURE CreateFunc (@idFunc int, @Func VARCHAR(50)) 
+CREATE PROCEDURE CreateFunc (@idFunc int, @Func VARCHAR(50),@output VARCHAR(250) OUTPUT)
 	
     
 AS
@@ -246,15 +246,17 @@ BEGIN
 		BEGIN
 			INSERT INTO TipoFunc
 			VALUES (@idFunc , @Func)
+			set @output = ''
 		END
 	ELSE
 		BEGIN
 			
-			PRINT 'Ja existe cargo com esse id'
+			set @output = 'Ja existe cargo com esse id'
 		END
 	
 	
-END	
+END
+--drop procedure CreateFunc
 GO
 
 CREATE PROCEDURE RemoveEmployee (@id VARCHAR(8))
@@ -267,4 +269,50 @@ BEGIN
 END
 
 	
+GO
+
+CREATE PROCEDURE CreateTrajecto (@partida varchar(250),@chegada varchar(250),@output VARCHAR(250) OUTPUT , @id int OUTPUT)
+AS
+	BEGIN
+		IF (( EXISTS(SELECT * FROM Estação WHERE Nome = @chegada)) and ( EXISTS (SELECT * FROM Estação WHERE Nome = @partida)))
+			BEGIN
+				INSERT INTO Trajeto VALUES (@partida,@chegada) set @id =  SCOPE_IDENTITY()  
+				set @output = ''
+
+			END
+		ELSE 
+			BEGIN 
+				set @output = 'Não exite essa paragem de chegada ou partida'
+			END 
+	END
+
+GO
+
+-- drop procedure CreateTrajecto 
+
+
+CREATE PROCEDURE CreateFazParagem (@ID int,@estacao varchar(250))
+as
+	begin 
+		INSERT INTO FazParagem VALUES (@ID,@estacao)  
+	end 
+
+go
+
+CREATE PROCEDURE RemoveTrajecto ( @id int )
+AS
+	BEGIN
+		delete from Trajeto where ID = @id
+	END
+
+GO
+
+CREATE PROCEDURE GETPartidaChegada ( @id int, @partida varchar(250) output,@chegada varchar(250) output)
+AS
+	BEGIN
+		set @partida = (select EstaçãoPartida from Trajeto where ID = @id)
+		set @chegada = (select EstaçãoChegada from Trajeto where ID = @id)
+
+	END
+
 GO

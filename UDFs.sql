@@ -102,3 +102,15 @@ Create FUNCTION ListTipos () RETURNS TABLE
 AS 
 	return (SELECT ID , Cargo FROM TipoFunc)
 go
+
+CREATE FUNCTION GetEstacoes ( ) RETURNS TABLE
+AS
+	RETURN (SELECT Nome AS Estações FROM Estação )
+
+GO
+
+CREATE FUNCTION GetParagens (@id int ) RETURNS TABLE
+AS
+	RETURN (SELECT Estação AS Paragens FROM FazParagem where TrajetoID =@id )
+
+GO

@@ -547,9 +547,9 @@ namespace WinFormsApp1
             this.label19.ForeColor = System.Drawing.Color.Maroon;
             this.label19.Location = new System.Drawing.Point(62, 408);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(140, 32);
+            this.label19.Size = new System.Drawing.Size(132, 32);
             this.label19.TabIndex = 20;
-            this.label19.Text = "Adicionar";
+            this.label19.Text = "Remover";
             // 
             // ButtonAdicionarCliente
             // 

@@ -32,6 +32,12 @@ namespace WinFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.ButtonRemoverFuncionário = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,9 +66,12 @@ namespace WinFormsApp1
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,6 +97,12 @@ namespace WinFormsApp1
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.textBox8);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.textBox7);
+            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.textBox6);
+            this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.ButtonRemoverFuncionário);
             this.tabPage1.Controls.Add(this.textBox3);
             this.tabPage1.Controls.Add(this.label5);
@@ -115,6 +130,55 @@ namespace WinFormsApp1
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Adicionar/Remover";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(276, 396);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(147, 29);
+            this.textBox8.TabIndex = 43;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(276, 371);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(101, 22);
+            this.label12.TabIndex = 42;
+            this.label12.Text = "Função ID";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(381, 193);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(147, 29);
+            this.textBox7.TabIndex = 41;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(381, 168);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(127, 22);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Último Nome";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(224, 193);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(132, 29);
+            this.textBox6.TabIndex = 39;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(224, 168);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(140, 22);
+            this.label10.TabIndex = 38;
+            this.label10.Text = "Nome do meio";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // ButtonRemoverFuncionário
             // 
@@ -219,7 +283,7 @@ namespace WinFormsApp1
             // 
             this.textBox12.Location = new System.Drawing.Point(65, 193);
             this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(463, 29);
+            this.textBox12.Size = new System.Drawing.Size(140, 29);
             this.textBox12.TabIndex = 26;
             // 
             // label16
@@ -227,9 +291,9 @@ namespace WinFormsApp1
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(65, 168);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(63, 22);
+            this.label16.Size = new System.Drawing.Size(146, 22);
             this.label16.TabIndex = 25;
-            this.label16.Text = "Nome";
+            this.label16.Text = "Primeiro Nome";
             // 
             // textBox11
             // 
@@ -304,6 +368,7 @@ namespace WinFormsApp1
             this.buttonRefreshTipos.TabIndex = 43;
             this.buttonRefreshTipos.Text = "Refresh";
             this.buttonRefreshTipos.UseVisualStyleBackColor = true;
+            this.buttonRefreshTipos.Click += new System.EventHandler(this.buttonRefreshTipos_Click);
             // 
             // ButtonAdicionarTipoFuncionário
             // 
@@ -366,6 +431,7 @@ namespace WinFormsApp1
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.PaleGreen;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(63, 308);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(536, 264);
@@ -382,6 +448,15 @@ namespace WinFormsApp1
             this.label6.TabIndex = 35;
             this.label6.Text = "Tipos Funcionário";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(536, 264);
+            this.dataGridView1.TabIndex = 44;
+            // 
             // FrmFuncionários
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -397,6 +472,8 @@ namespace WinFormsApp1
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,5 +512,12 @@ namespace WinFormsApp1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button ButtonAdicionarTipoFuncionário;
         private System.Windows.Forms.Button buttonRefreshTipos;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
