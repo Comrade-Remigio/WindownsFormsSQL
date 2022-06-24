@@ -265,5 +265,10 @@ namespace WinFormsApp1
             DataTable dt = SelectAllTrajetos();
             dataGridView3.DataSource = dt;
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
